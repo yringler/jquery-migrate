@@ -17,6 +17,13 @@ test( "jQuery(html, props)", function() {
 	equal( $el.val(), "value", "Call setter method" );
 });
 
+test("JQuery([attribute=])", function () {
+	expect(1);
+	var $el = jQuery("<label></label").find('label[id=]');
+	equal($el.length, 0);
+	
+});
+
 test( "jQuery(html) loose rules", function() {
 	expect( 33 );
 
